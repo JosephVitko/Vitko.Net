@@ -5,6 +5,10 @@ The library abstracts CRUD operations with Azure Blob Storage, CosmosDB, and Act
 
 The current version supports ASP.NET Core 6.40
 
+## Installation
+
+Download the package with [Nuget](https://www.nuget.org/packages/Vitko.Net/1.0.0).
+
 ## How to use
 
 ### Configuration
