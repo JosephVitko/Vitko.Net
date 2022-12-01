@@ -82,19 +82,24 @@ For users, you must also add methods for conversion between the user model and t
  _service ??= UserServiceFactory.B2CInstance.CreateService<B2CUser>(null, ConvertUserToType, ConvertTypeToUser);
  
  public static explicit operator B2CUser(Microsoft.Graph.User user) {
-    ...
+    return new B2CUser(user.Id, user.DisplayName, user.UserPrincipalName, user.Mail);
  }
  
 public static explicit operator Microsoft.Graph.User(B2CUser user) {
-    ...
+    return new Microsoft.Graph.User {
+        Id = user.Id,
+        DisplayName = user.DisplayName,
+        UserPrincipalName = user.Email,
+        Mail = user.Email
+    };
 }
 
-public static B2CUser? ConvertUserToType(Microsoft.Graph.User user) {
-    return (B2CUser?) user;
+public static B2CUser ConvertUserToType(Microsoft.Graph.User user) {
+    return (B2CUser) user;
 }
 
-public static Microsoft.Graph.User? ConvertTypeToUser(B2CUser user) {
-    return (Microsoft.Graph.User?) user;
+public static Microsoft.Graph.User ConvertTypeToUser(B2CUser user) {
+    return (Microsoft.Graph.User) user;
 }
 ```
  
