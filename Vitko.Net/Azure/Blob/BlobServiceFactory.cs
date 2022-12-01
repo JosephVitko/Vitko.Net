@@ -3,6 +3,9 @@ using Azure.Storage.Blobs;
 
 namespace Vitko.Net.Azure.Blob;
 
+/// <summary>
+/// Stores some configuration for initializing <see cref="BlobServiceClient"/>.
+/// </summary>
 public class BlobServiceFactory
 {
     private static BlobServiceFactory? _instance;

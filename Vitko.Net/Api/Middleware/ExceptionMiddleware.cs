@@ -5,6 +5,11 @@ using Vitko.Net.Api.Middleware.Exceptions;
 
 namespace Vitko.Net.Api.Middleware;
 
+/// <summary>
+/// Middleware used for handling exceptions in the application.
+/// If the exception extends AbstractApiException, the appropriate status code is returned.
+/// Otherwise, the status code 500 is returned.
+/// </summary>
 public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;

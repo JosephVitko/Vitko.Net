@@ -12,6 +12,11 @@ using Vitko.Net.Azure.Graph;
 
 namespace Vitko.Net.Api;
 
+/// <summary>
+/// Default startup class that automatically configures:
+/// - Authentication if an "AuthScheme" is specified in the configuration
+/// - Blob, CosmosDB, and Graph Services if enabled in the configuration
+/// </summary>
 public class Startup
 {
     public IConfiguration Configuration { get; }
@@ -23,6 +28,12 @@ public class Startup
         Configuration = configuration;
     }
 
+    /// <summary>
+    /// Configures authentication if an "AuthScheme" is specified in the configuration
+    /// as well as the Blob, CosmosDB, and Graph Services if enabled in the configuration
+    /// </summary>
+    /// <param name="services"></param>
+    /// <exception cref="Exception"></exception>
     public void ConfigureServices(IServiceCollection services)
     {
         IConfigurationSection serviceConfigSection = Configuration.GetSection("ServiceConfig");

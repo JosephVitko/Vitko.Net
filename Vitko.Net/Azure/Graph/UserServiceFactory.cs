@@ -3,6 +3,9 @@ using Microsoft.Graph;
 
 namespace Vitko.Net.Azure.Graph;
 
+/// <summary>
+/// Singleton class that stores configuration for initializing instances of <see cref="UserService{T}"/>.
+/// </summary>
 public class UserServiceFactory
 {
     private static UserServiceFactory? _b2cUserServiceFactory;

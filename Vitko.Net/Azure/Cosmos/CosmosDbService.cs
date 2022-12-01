@@ -5,6 +5,10 @@ using Microsoft.Azure.Cosmos.Linq;
 
 namespace Vitko.Net.Azure.Cosmos;
 
+/// <summary>
+/// Service for performing CRUD operations on a certain type of item in a Cosmos DB container.
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class CosmosDbService<T> : ICrudService<T> where T : class
 {
     private readonly Container _container;

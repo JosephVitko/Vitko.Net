@@ -6,6 +6,10 @@ using Azure.Storage.Blobs.Specialized;
 
 namespace Vitko.Net.Azure.Blob;
 
+/// <summary>
+/// Service for performing CRUD operations in an Azure Blob Storage container of a particular type of object.
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class BlobService<T> : ICrudService<T> where T : AbstractBlob
 {
     private readonly BlobContainerClient _containerClient;

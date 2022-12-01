@@ -4,6 +4,11 @@ using Microsoft.Graph;
 
 namespace Vitko.Net.Azure.Graph;
 
+/// <summary>
+/// Service for performing CRUD operations on users in Azure AD or Azure AD B2C.
+/// Note: Instantiating this service requires injecting conversion operations between Graph users and the desired user type (T).
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class UserService<T> : ICrudService<T> where T : class
 {
     private readonly GraphService _graphService;

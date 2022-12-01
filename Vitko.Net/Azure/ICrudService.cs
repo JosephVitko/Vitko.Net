@@ -2,6 +2,11 @@
 
 namespace Vitko.Net.Azure;
 
+/// <summary>
+/// Contains common CRUD methods for interacting with various Azure storage services.
+/// The service interacts with a specific type of object, which is defined by the generic parameter.
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public interface ICrudService<T> where T : class
 {
     public Task<T?> GetItemAsync(string id);
