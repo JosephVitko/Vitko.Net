@@ -30,7 +30,7 @@ Here is an example appsettings.json file:
   "AzureAdB2C": {
     "Instance": "https://login.microsoftonline.com/tfp/",
     "Domain": "mydomain.onmicrosoft.com",
-    "ClientId": "myclientid",
+    "ClientId": "myclientid"
   }
 }
 ```
@@ -76,6 +76,10 @@ private const string ContainerName = "devices";
 ```
 
 This will create a service that can be used to perform CRUD operations on the model. The service will automatically be initialized with the configuration specified in appsettings.json.
+
+```c#
+await Device.Service.GetItemAsync("mydeviceid");
+```
 
 For users, you must also add methods for conversion between the user model and the Microsoft Graph user class.
 ```c#
