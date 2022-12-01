@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Azure;
+namespace Vitko.Net.Azure;
 
 public interface ICrudService<T> where T : class
 {

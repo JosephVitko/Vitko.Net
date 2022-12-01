@@ -1,4 +1,4 @@
-﻿namespace Azure;
+﻿namespace Vitko.Net.Azure;
 
 public interface ICrudServiceFactory
 {

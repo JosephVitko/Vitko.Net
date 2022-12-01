@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Azure.Cosmos;
+namespace Vitko.Net.Azure.Cosmos;
 
 public abstract class AbstractCosmosItem
 {

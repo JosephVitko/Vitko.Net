@@ -1,4 +1,4 @@
-﻿namespace Azure.Blob;
+﻿namespace Vitko.Net.Azure.Blob;
 
 public class AbstractBlob
 {

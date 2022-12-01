@@ -1,7 +1,8 @@
 ﻿using System.Linq.Expressions;
+using Azure;
 using Microsoft.Graph;
 
-namespace Azure.Graph;
+namespace Vitko.Net.Azure.Graph;
 
 public class UserService<T> : ICrudService<T> where T : class
 {

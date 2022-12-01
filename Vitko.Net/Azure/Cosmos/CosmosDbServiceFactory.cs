@@ -1,6 +1,7 @@
-﻿using Microsoft.Azure.Cosmos;
+﻿using Azure;
+using Microsoft.Azure.Cosmos;
 
-namespace Azure.Cosmos;
+namespace Vitko.Net.Azure.Cosmos;
 
 /// <summary>
 /// Singleton class used to generate cosmos db service instances for each container

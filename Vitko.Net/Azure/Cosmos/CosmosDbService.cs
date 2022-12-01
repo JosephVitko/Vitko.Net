@@ -1,8 +1,9 @@
 ﻿using System.Linq.Expressions;
+using Azure;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 
-namespace Azure.Cosmos;
+namespace Vitko.Net.Azure.Cosmos;
 
 public class CosmosDbService<T> : ICrudService<T> where T : class
 {

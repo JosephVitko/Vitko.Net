@@ -2,7 +2,7 @@
 using Azure.Identity;
 using Microsoft.Graph;
 
-namespace Azure.Graph;
+namespace Vitko.Net.Azure.Graph;
 
 /// <summary>
 /// Methods for interacting with Microsoft Graph.

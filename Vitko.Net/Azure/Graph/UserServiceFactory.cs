@@ -1,6 +1,7 @@
-﻿using Microsoft.Graph;
+﻿using Azure;
+using Microsoft.Graph;
 
-namespace Azure.Graph;
+namespace Vitko.Net.Azure.Graph;
 
 public class UserServiceFactory
 {

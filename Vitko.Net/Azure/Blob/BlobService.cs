@@ -1,9 +1,10 @@
 ﻿using System.Linq.Expressions;
+using Azure;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Azure.Storage.Blobs.Specialized;
 
-namespace Azure.Blob;
+namespace Vitko.Net.Azure.Blob;
 
 public class BlobService<T> : ICrudService<T> where T : AbstractBlob
 {

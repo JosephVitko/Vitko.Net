@@ -1,6 +1,7 @@
-﻿using Azure.Storage.Blobs;
+﻿using Azure;
+using Azure.Storage.Blobs;
 
-namespace Azure.Blob;
+namespace Vitko.Net.Azure.Blob;
 
 public class BlobServiceFactory
 {
